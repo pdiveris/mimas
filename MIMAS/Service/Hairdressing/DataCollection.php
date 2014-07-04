@@ -25,7 +25,7 @@ namespace MIMAS\Service\Jorum;
 class DataCollection extends \MIMAS\Collection {
   /**
    * Context object
-   * @var \MIMAS\Service\Jorum\Context
+   * @var \MIMAS\Service\Context
    */
   private $context;
 

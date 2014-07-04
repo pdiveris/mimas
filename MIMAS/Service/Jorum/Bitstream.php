@@ -118,9 +118,10 @@ class Bitstream extends JorumApi {
    *
    * @param string $params
    * @param string $inputFormat
+   * @param array $options
    */
-  public function __construct($params = '', $inputFormat = 'application/json') {
-    parent::__construct($params);
+  public function __construct($params = '', $inputFormat = 'application/json', $options=array()) {
+    parent::__construct($params,$inputFormat,$options);
 
   }
 

@@ -103,13 +103,14 @@ class Item extends JorumApi {
      */
     protected $bitstreams = array();
 
-    /**
-     * Constructor. See base class for details
-     * @param string $params
-     * @param string $inputFormat
-     */
-    public function __construct($params = '', $inputFormat = 'application/json') {
-      parent::__construct($params,$inputFormat);
+  /**
+   * Constructor. See base class for details
+   * @param string $params
+   * @param string $inputFormat
+   * @param array $options
+   */
+    public function __construct($params = '', $inputFormat = 'application/json',$options=array()) {
+      parent::__construct($params,$inputFormat,$options);
     }
 
     /**

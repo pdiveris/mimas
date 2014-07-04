@@ -30,6 +30,21 @@ use jyggen\Curl;
  */
 class JorumApi implements \JsonSerializable, \IteratorAggregate {
   /**
+   * JSON
+   */
+  const ACCEPT_JSON = 'application/json';
+
+  /**
+   * XML
+   */
+  const ACCEPT_XML = 'application/xml';
+
+  /**
+   * Service point for getting list of handles - as requested by K-Int
+   */
+  const SERVICE_HANDLES = 'items/handles';
+
+  /**
    *  The API access URL.
    *
    * @var string apiUrl
@@ -92,6 +107,13 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate {
   private static $data = '';
 
   /**
+   * extra options e.g. limit and offset
+   * @var array
+   */
+  private $options = array();
+
+
+  /**
    *
    * Constructor, accepts a string or an array as a paramater
    *
@@ -102,11 +124,14 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate {
    *
    * @param string $params
    * @param string $inputFormat
-   *
+   * @param array $options
    */
-  public function __construct($params = '', $inputFormat = 'json')
+  public function __construct($params = '', $inputFormat = 'json', $options = array())
   {
     self::$httpAccept = "application/$inputFormat";
+
+    // set options e.g. offset and limit
+    $this->setOptions($options);
 
     $reflectionClass = new \ReflectionClass($this);
 
@@ -120,6 +145,7 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate {
 
       // NOPE, staging is DEAD
       self::$apiUrl = 'http://dspace.jorum.ac.uk/rest/';
+      self::$apiUrl = 'http://10.99.120.145:8080/rest/';
 
       /**
        * 2. get my class
@@ -404,22 +430,19 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate {
     return $ret;
   }
 
-  /**
-   * Fetch a list of stuff such as Items or Collections
-   * Used the data to populate a collection
-   * Later to add a Context
-   *
-   * @return DataCollection
-   */
+ /**
+  * Fetch a list of stuff such as Items or Collections
+  * Used the data to populate a collection
+  * Later to add a Context
+  *
+  * @return DataCollection
+  */
   public function all() {
     // set the url
     $url = self::$apiUrl . self::$servicePoint;
 
-
-    $options = Input::except('input');
-
     // get a raw response
-    self::$rawData = self::apiCall($url, '', array('headers'=>array('Accept: '.self::$httpAccept ), 'options'=>$options));
+    self::$rawData = self::apiCall($url, '', array('headers'=>array('Accept: '.self::$httpAccept ), 'options'=>$this->getOptions()));
 
     // decode it and set php native rough data....
     if (self::$httpAccept=='application/xml') {
@@ -448,6 +471,43 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate {
     $ret = new \MIMAS\Service\DataCollection($data, $context);
 
     return($ret);
+  }
+
+  /**
+   * Return an array of all handles to be json encoded
+   * I would rather this was a static function but let's just forget this for now
+   */
+  public static function allHandles() {
+    // set the url
+    $item = new Item('json','json');
+    if ($item);
+
+    $url = self::$apiUrl . self::SERVICE_HANDLES;
+    $counter = 0;
+
+    // get a raw response
+    $options = array('offset'=>$counter);
+
+    self::$rawData = self::apiCall($url, '', array('headers'=>array('Accept: '.self::ACCEPT_JSON ), 'options'=>$options));
+    self::$data = json_decode(self::$rawData);
+
+    return self::$data;
+  }
+
+  /**
+   * Set options i.e. limit and offset
+   * @param $options
+   */
+  public function setOptions($options) {
+    $this->options = $options;
+  }
+
+  /**
+   * Get options i.e. limit and offset
+   * @return array $options
+   */
+  public function getOptions() {
+    return $this->options;
   }
 
   /**

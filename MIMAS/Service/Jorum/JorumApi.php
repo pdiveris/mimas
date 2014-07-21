@@ -145,7 +145,7 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate {
 
       // NOPE, staging is DEAD
       self::$apiUrl = 'http://dspace.jorum.ac.uk/rest/';
-      self::$apiUrl = 'http://10.99.120.145:8080/rest/';
+      // self::$apiUrl = 'http://10.99.120.145:8080/rest/';
 
       /**
        * 2. get my class
@@ -308,7 +308,7 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate {
           \Cache::put($id, $stream, $expiresAt);
         }
       } else {
-        throw new \Exception("CURL problems");
+        throw new \Exception("CURL problems $url ");
       }
       return ($response->body);
     } else {

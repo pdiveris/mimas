@@ -293,7 +293,7 @@ class JorumDbModel {
    * @return int $limit
    */
   public static function getLimit() {
-    return self::$limit;
+    return (int)self::$limit;
   }
 
   /**
@@ -301,7 +301,7 @@ class JorumDbModel {
    * @return int $offset
    */
   public static function getOffset() {
-    return self::$offset;
+    return (int)self::$offset;
   }
 
   /**

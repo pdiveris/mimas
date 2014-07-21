@@ -225,6 +225,8 @@ class DrupalApi implements  \MIMAS\Service\RepositoryInterface, \JsonSerializabl
       $context = new Context(
         array(
           'totalCount'=>count($result->getItems()),
+          'offset'=>Db\Models\Node::getOffset(),
+          'limit'=>Db\Models\Node::getLimit(),
           'query'=>Db\Models\Node::getQuery(),
           'queryDate'=>Db\Models\Node::getQueryDateTime(),
         )
@@ -253,7 +255,9 @@ class DrupalApi implements  \MIMAS\Service\RepositoryInterface, \JsonSerializabl
       $context = new Context(
         array(
           'totalCount'=>count($result->getItems()),
-          'query'=>Db\Models\Node::getQuery(),
+          'offset'=>Db\Models\MenuLink::getOffset(),
+          'limit'=>Db\Models\MenuLink::getLimit(),
+          'query'=>Db\Models\MenuLink::getQuery(),
           'queryDate'=>Db\Models\Node::getQueryDateTime(),
         )
       );

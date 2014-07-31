@@ -4,19 +4,20 @@
  */
 namespace MIMAS\XmlSerialization\Tests;
 
-    /** Bad: duplicate element */
-    class Sample4 {
+/** Bad: duplicate element */
+class Sample4
+{
 
-        /**
-         * a
-         * @XmlElement(int, test)
-         */
-        private $a;
+    /**
+     * a
+     * @XmlElement(int, test)
+     */
+    private $a;
 
-        /**
-         * b
-         * @XmlElement(string, test)
-         */
-        private $b;
+    /**
+     * b
+     * @XmlElement(string, test)
+     */
+    private $b;
 
-    }
+}

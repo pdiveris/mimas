@@ -15,11 +15,13 @@
  * @todo This needs to change to something like List in order to avoid confusion with DSPACE Collection
  */
 namespace MIMAS;
+
 /**
  * Class Collection
  * @package MIMAS
  */
-class Collection implements \JsonSerializable, \IteratorAggregate {
+class Collection implements \JsonSerializable, \IteratorAggregate
+{
     /**
      * The items contained in the collection.
      *
@@ -34,7 +36,7 @@ class Collection implements \JsonSerializable, \IteratorAggregate {
      */
     public function __construct(array $items = array())
     {
-      $this->items = $items;
+        $this->items = $items;
     }
 
     /**
@@ -44,35 +46,34 @@ class Collection implements \JsonSerializable, \IteratorAggregate {
      */
     public function all()
     {
-      return $this->items;
+        return $this->items;
     }
 
     /**
      * Get an item from the collection by key.
      *
-     * @param  mixed  $key
-     * @param  mixed  $default
+     * @param  mixed $key
+     * @param  mixed $default
      * @return mixed
      */
     public function get($key, $default = null)
     {
-      if (array_key_exists($key, $this->items))
-      {
-        return $this->items[$key];
-      }
+        if (array_key_exists($key, $this->items)) {
+            return $this->items[$key];
+        }
 
-      return value($default);
+        return value($default);
     }
 
     /**
      * Determine if an item exists in the collection by key.
      *
-     * @param  mixed  $key
+     * @param  mixed $key
      * @return bool
      */
     public function has($key)
     {
-      return array_key_exists($key, $this->items);
+        return array_key_exists($key, $this->items);
     }
 
     /**
@@ -82,19 +83,19 @@ class Collection implements \JsonSerializable, \IteratorAggregate {
      */
     public function last()
     {
-      return count($this->items) > 0 ? end($this->items) : null;
+        return count($this->items) > 0 ? end($this->items) : null;
     }
 
     /**
      * Put an item in the collection by key.
      *
-     * @param  mixed  $key
-     * @param  mixed  $value
+     * @param  mixed $key
+     * @param  mixed $value
      * @return void
      */
     public function put($key, $value)
     {
-      $this->items[$key] = $value;
+        $this->items[$key] = $value;
     }
 
     /**
@@ -104,22 +105,21 @@ class Collection implements \JsonSerializable, \IteratorAggregate {
      */
     public function toArray()
     {
-      return array_map(function($value)
-      {
-        return $value instanceof ArrayableInterface ? $value->toArray() : $value;
+        return array_map(function ($value) {
+            return $value instanceof ArrayableInterface ? $value->toArray() : $value;
 
-      }, $this->items);
+        }, $this->items);
     }
 
     /**
      * Get the collection of items as JSON.
      *
-     * @param  int  $options
+     * @param  int $options
      * @return string
      */
     public function toJson($options = 0)
     {
-      return json_encode($this->toArray(), $options);
+        return json_encode($this->toArray(), $options);
     }
 
     /**
@@ -129,7 +129,7 @@ class Collection implements \JsonSerializable, \IteratorAggregate {
      */
     public function count()
     {
-      return count($this->items);
+        return count($this->items);
     }
 
 
@@ -140,20 +140,21 @@ class Collection implements \JsonSerializable, \IteratorAggregate {
      */
     public function __toString()
     {
-      return $this->toJson();
+        return $this->toJson();
     }
 
-  /**
-   * Output HTML
-   * @return void
-   */
-  public function toHtml() {
-      $this->getContext()->toHtml();
+    /**
+     * Output HTML
+     * @return void
+     */
+    public function toHtml()
+    {
+        $this->getContext()->toHtml();
 
-      foreach ($this->items as $item) {
-        echo $item->toHtml();
-        echo '<hr/>';
-      }
+        foreach ($this->items as $item) {
+            echo $item->toHtml();
+            echo '<hr/>';
+        }
     }
 
     /**
@@ -161,7 +162,7 @@ class Collection implements \JsonSerializable, \IteratorAggregate {
      */
     public function jsonSerialize()
     {
-      return get_object_vars($this);
+        return get_object_vars($this);
     }
 
 
@@ -173,8 +174,8 @@ class Collection implements \JsonSerializable, \IteratorAggregate {
      */
     public function getIterator()
     {
-      return new \ArrayIterator( (array)$this);
+        return new \ArrayIterator((array)$this);
     }
 
 
-  }
+}

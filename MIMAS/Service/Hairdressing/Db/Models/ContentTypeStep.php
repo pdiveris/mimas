@@ -14,6 +14,7 @@
  *
  */
 namespace MIMAS\Service\Hairdressing\Db\Models;
+
 /**
  * Class ContentTypeStep
  *
@@ -25,70 +26,71 @@ namespace MIMAS\Service\Hairdressing\Db\Models;
  * @author Petros Diveris
  *
  */
-class ContentTypeStep extends \MIMAS\Service\Hairdressing\Db\JorumDbModel {
-  /**
-	 * The database table used by the model.
-	 * @var string
-	 */
-  protected static $table = 'content_type_step';
+class ContentTypeStep extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
+{
+    /**
+     * The database table used by the model.
+     * @var string
+     */
+    protected static $table = 'content_type_step';
 
-  /**
-  * The PK
-  *
-  * @var string $primaryKey
-  */
-  protected static $primaryKey = 'vid';
+    /**
+     * The PK
+     *
+     * @var string $primaryKey
+     */
+    protected static $primaryKey = 'vid';
 
-  /**
-   * Version id
-   * @var int $vid
-   */
-  public $vid = 0;
+    /**
+     * Version id
+     * @var int $vid
+     */
+    public $vid = 0;
 
-  /**
-   * Node id
-   * @var int $nid
-   */
-  public $nid = 0;
+    /**
+     * Node id
+     * @var int $nid
+     */
+    public $nid = 0;
 
-  /**
-   * Step value
-   * @var int $field_step_value
-   */
-  public $field_step_value = 0;
+    /**
+     * Step value
+     * @var int $field_step_value
+     */
+    public $field_step_value = 0;
 
-  /**
-   * field_stepimage_fid
-   * @var int $field_stepimage_fid
-   */
-  public $field_stepimage_fid = 0;
+    /**
+     * field_stepimage_fid
+     * @var int $field_stepimage_fid
+     */
+    public $field_stepimage_fid = 0;
 
-  /**
-   * field_stepimage_list
-   * @var int $field_stepimage_list
-   */
-  public $field_stepimage_list = 0;
+    /**
+     * field_stepimage_list
+     * @var int $field_stepimage_list
+     */
+    public $field_stepimage_list = 0;
 
-  /**
-   * field_stepimage_data
-   * @var string $field_stepimage_data
-   */
-  public $field_stepimage_data = '';
+    /**
+     * field_stepimage_data
+     * @var string $field_stepimage_data
+     */
+    public $field_stepimage_data = '';
 
-  /**
-   * Constructor. Check base class for use of attributes.
-   * @see JorumDbModel
-   *
-   * @param array $attributes
-   */
+    /**
+     * Constructor. Check base class for use of attributes.
+     * @see JorumDbModel
+     *
+     * @param array $attributes
+     */
 
-  /**
-   * Constructor. Check base class
-   * @param array $attributes
-   */
-  public  function __construct($attributes = array())
-  {
-    parent::__construct($attributes);
-  }
+    /**
+     * Constructor. Check base class
+     * @param array $attributes
+     */
+    public function __construct($attributes = array())
+    {
+        parent::__construct($attributes);
+    }
 
 }

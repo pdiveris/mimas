@@ -4,20 +4,22 @@
  */
 namespace MIMAS\XmlSerialization\Tests;
 
-    use MIMAS\XmlSerialization\Annotation;
+use MIMAS\XmlSerialization\Annotation;
 
+/**
+ * Class AnnotationTests
+ * @package MIMAS\XmlSerialization\Tests
+ */
+class AnnotationTests
+{
     /**
-     * Class AnnotationTests
-     * @package MIMAS\XmlSerialization\Tests
+     * test parse
      */
-    class AnnotationTests {
-      /**
-       * test parse
-       */
-      function test_parse() {
-            $comment =
-<<<TEXT
-   /**
+    function test_parse()
+    {
+        $comment =
+          <<<TEXT
+             /**
      * @xmlattribute  ( )
      * @XMLELEMENT (
             1,
@@ -30,28 +32,28 @@ namespace MIMAS\XmlSerialization\Tests;
      * @XmlRoot(root  )
      */
 TEXT;
-            $annotations = Annotation::parse($comment);
+        $annotations = Annotation::parse($comment);
 
-            assert(count($annotations) == 4);
+        assert(count($annotations) == 4);
 
-            /* @var $a Annotation */
-            $a = $annotations[0];
-            assert($a->getName() == "attribute");
-            assert($a->getParamCount() == 0);
+        /* @var $a Annotation */
+        $a = $annotations[0];
+        assert($a->getName() == "attribute");
+        assert($a->getParamCount() == 0);
 
-            $a = $annotations[1];
-            assert($a->getName() == "element");
-            assert($a->getParam(0) == "1");
-            assert($a->getParam(1) == "*");
-            assert($a->getParam(2) == "Test");
+        $a = $annotations[1];
+        assert($a->getName() == "element");
+        assert($a->getParam(0) == "1");
+        assert($a->getParam(1) == "*");
+        assert($a->getParam(2) == "Test");
 
-            $a = $annotations[2];
-            assert($a->getName() == "element");
-            assert($a->getParamCount() == 0);
+        $a = $annotations[2];
+        assert($a->getName() == "element");
+        assert($a->getParamCount() == 0);
 
-            $a = $annotations[3];
-            assert($a->getName() == "root");
-            assert($a->getParam(0) == "root");
-        }
-
+        $a = $annotations[3];
+        assert($a->getName() == "root");
+        assert($a->getParam(0) == "root");
     }
+
+}

@@ -22,37 +22,38 @@ namespace MIMAS\Service\Hairdressing\Db\Models;
  * @author Petros Diveris
  *
  */
-class TermHierarchy extends \MIMAS\Service\Hairdressing\Db\JorumDbModel {
-  /**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-  protected static $table = 'term_hierarchy';
+class TermHierarchy extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
+{
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected static $table = 'term_hierarchy';
 
-  /**
-  * The PK is not id but fid
-  *
-  * @var string $primaryKey
-  */
-  protected static $primaryKey = 'tid';
+    /**
+     * The PK is not id but fid
+     *
+     * @var string $primaryKey
+     */
+    protected static $primaryKey = 'tid';
 
-  /**
-  * Parent id. As mentioned above, this is 0 in HT
-  * @var int $parent
-  */
-  public $parent = 0;
+    /**
+     * Parent id. As mentioned above, this is 0 in HT
+     * @var int $parent
+     */
+    public $parent = 0;
 
-  /**
-   * Constructor. Check base class for use of attributes.
-   * @see JorumDbModel
-   *
-   * @param array $attributes
-   */
+    /**
+     * Constructor. Check base class for use of attributes.
+     * @see JorumDbModel
+     *
+     * @param array $attributes
+     */
 
-  public  function __construct($attributes = array())
-  {
-    parent::__construct($attributes);
-  }
+    public function __construct($attributes = array())
+    {
+        parent::__construct($attributes);
+    }
 
 }

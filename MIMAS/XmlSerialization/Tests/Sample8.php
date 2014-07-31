@@ -4,23 +4,25 @@
  *
  */
 namespace MIMAS\XmlSerialization\Tests;
+
 /**
  * Class Sample8
  * @package MIMAS\XmlSerialization\Tests
  */
-class Sample8 {
+class Sample8
+{
 
-        /**
-         * element
-         * @XmlElement
-         * @XmlElement(bool, element-bool)
-         */
-        public $element = "xyz";
+    /**
+     * element
+     * @XmlElement
+     * @XmlElement(bool, element-bool)
+     */
+    public $element = "xyz";
 
-        /**
-         * attr
-         * @XmlAttribute(int)
-         */
-        public $attr = 5;
+    /**
+     * attr
+     * @XmlAttribute(int)
+     */
+    public $attr = 5;
 
-    }
+}

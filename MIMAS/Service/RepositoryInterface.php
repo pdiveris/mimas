@@ -1,7 +1,6 @@
 <?php
 /**
  * Enforce at least the following three methods
-
  * @package      MIMAS
  * @subpackage   Service
  * @category     API
@@ -15,29 +14,32 @@
  */
 
 namespace MIMAS\Service;
+
 /**
  * Interface RepositoryInterface
  * @package MIMAS\Service
  */
-interface RepositoryInterface {
-  /**
-   * Find by id or handle
-   * @param string $id
-   * @param array $options
-   * @return mixed
-   */
-  public function findByIdOrHandle($id = '', $options = array());
+interface RepositoryInterface
+{
 
-  /**
-   * Return all rows
-   * @return mixed
-   */
-  public function all();
+    /**
+     * Find by id or handle
+     * @param string $id
+     * @param array $options
+     * @return mixed
+     */
+    public function findByIdOrHandle($id = '', $options = array());
 
-  /**
-   * Return as pretty HTML
-   * @return mixed
-   */
-  public function toHtml();
+    /**
+     * Return all rows
+     * @return mixed
+     */
+    public function all();
+
+    /**
+     * Return as pretty HTML
+     * @return mixed
+     */
+    public function toHtml();
 
 } 

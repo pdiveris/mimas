@@ -13,6 +13,7 @@
  *
  */
 namespace MIMAS\Service\Hairdressing\Db\Models;
+
 /**
  * Class PrevNextNode
  * This models the previous_next_node wizzardy type of relation table as defined in Drupal 6.x
@@ -20,49 +21,50 @@ namespace MIMAS\Service\Hairdressing\Db\Models;
  * @author Petros Diveris
  *
  */
-class PrevNextNode extends \MIMAS\Service\Hairdressing\Db\JorumDbModel {
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-  protected static $table = 'prev_next_node';
+class PrevNextNode extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
+{
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected static $table = 'prev_next_node';
 
-  /**
-  * The PK nid (node id)
-  *
-  * @var string $primaryKey
-  */
-  protected static $primaryKey = 'nid';
+    /**
+     * The PK nid (node id)
+     *
+     * @var string $primaryKey
+     */
+    protected static $primaryKey = 'nid';
 
-  /**
-   * Previous Node id
-   * @var int $prev_nid
-   */
-  public $prev_nid = 0;
+    /**
+     * Previous Node id
+     * @var int $prev_nid
+     */
+    public $prev_nid = 0;
 
-  /**
-   * next Node id
-   * @var int $next_nid;
-   */
-  public $next_nid = 0;
+    /**
+     * next Node id
+     * @var int $next_nid ;
+     */
+    public $next_nid = 0;
 
-  /**
-   * Time it changed
-   * @var int DATETIME $changed
-   */
-  public $changed = 0;
+    /**
+     * Time it changed
+     * @var int DATETIME $changed
+     */
+    public $changed = 0;
 
-  /**
-   * Constructor. Check base class for use of attributes.
-   * @see JorumDbModel
-   *
-   * @param array $attributes
-   */
+    /**
+     * Constructor. Check base class for use of attributes.
+     * @see JorumDbModel
+     *
+     * @param array $attributes
+     */
 
-  public  function __construct($attributes = array())
-  {
-    parent::__construct($attributes);
-  }
+    public function __construct($attributes = array())
+    {
+        parent::__construct($attributes);
+    }
 
 }

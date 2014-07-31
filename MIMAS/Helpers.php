@@ -15,22 +15,25 @@
  * @todo         Write unit tests for XML encoding
  */
 namespace MIMAS;
+
 use \Selene\Components\Xml\Writer;
+
 /**
  * Class Helpers
  * @package MIMAS
  */
-class Helpers {
+class Helpers
+{
+    /**
+     * XML encoder wrapper method
+     * @param $object
+     * @return string
+     */
+    public static function xmlEncode($object)
+    {
+        $writer = new Writer(new \Selene\Components\Xml\Normalizer\BobNormalizer());
 
-  /**
-   * XML encoder wrapper method
-   * @param $object
-   * @return string
-   */
-  public static function xmlEncode($object) {
-    $writer = new Writer(new \Selene\Components\Xml\Normalizer\BobNormalizer());
-
-    return $writer->dump($object);
-  }
+        return $writer->dump($object);
+    }
 
 }

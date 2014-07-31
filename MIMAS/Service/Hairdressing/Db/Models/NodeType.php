@@ -21,122 +21,123 @@ namespace MIMAS\Service\Hairdressing\Db\Models;
  * @author Petros Diveris
  *
  */
-class NodeType extends \MIMAS\Service\Hairdressing\Db\JorumDbModel {
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-  protected static $table = 'node_type';
+class NodeType extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
+{
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected static $table = 'node_type';
 
-  /**
-  * PK is string 'type'
-  * @var string $primaryKey
-  */
-  protected static $primaryKey = 'type';
+    /**
+     * PK is string 'type'
+     * @var string $primaryKey
+     */
+    protected static $primaryKey = 'type';
 
-  /**
-   * PK type (e.g. 'page', 'step', 'long_answer', 'poll'
-   *
-   * @var string $name
-   */
-  public $name = '';
+    /**
+     * PK type (e.g. 'page', 'step', 'long_answer', 'poll'
+     *
+     * @var string $name
+     */
+    public $name = '';
 
-  /**
-   * Module (e.g. 'quiz_question', 'node', 'poll' etc)
-   *
-   * @var string
-   */
-  public $module = '';
+    /**
+     * Module (e.g. 'quiz_question', 'node', 'poll' etc)
+     *
+     * @var string
+     */
+    public $module = '';
 
-  /**
-   * Description e.g. 'Quiz questions that allow a user to choose from a scale.'
-   * It can (and does) contain HTML!
-   *
-   * @var string
-   */
-  public $description = '';
+    /**
+     * Description e.g. 'Quiz questions that allow a user to choose from a scale.'
+     * It can (and does) contain HTML!
+     *
+     * @var string
+     */
+    public $description = '';
 
-  /**
-   * Help text
-   *
-   * @var string
-   */
-  public $help = '';
+    /**
+     * Help text
+     *
+     * @var string
+     */
+    public $help = '';
 
-  /**
-   * Has title
-   *
-   * @var boolean
-   */
-  public $has_title = 0;
+    /**
+     * Has title
+     *
+     * @var boolean
+     */
+    public $has_title = 0;
 
-  /**
-   * Title label
-   *
-   * @var string
-   */
-  public $title_label = '';
+    /**
+     * Title label
+     *
+     * @var string
+     */
+    public $title_label = '';
 
-  /**
-   * Has body
-   *
-   * @var int
-   */
-  public $has_body = 0;
+    /**
+     * Has body
+     *
+     * @var int
+     */
+    public $has_body = 0;
 
-  /**
-   * Label for body
-   *
-   * @var string
-   */
-  public $body_label = '';
+    /**
+     * Label for body
+     *
+     * @var string
+     */
+    public $body_label = '';
 
-  /**
-   * Minimum word count
-   *
-   * @var int
-   */
-  public $min_word_count = 0;
+    /**
+     * Minimum word count
+     *
+     * @var int
+     */
+    public $min_word_count = 0;
 
-  /**
-   * Boolean custom
-   *
-   * @var int
-   */
-  public $custom = 0;
+    /**
+     * Boolean custom
+     *
+     * @var int
+     */
+    public $custom = 0;
 
-  /**
-   * Boolean modified
-   *
-   * @var int
-   */
-  public $modified = 0;
+    /**
+     * Boolean modified
+     *
+     * @var int
+     */
+    public $modified = 0;
 
-  /**
-   * Boolean locked
-   *
-   * @var int
-   */
-  public $locked = 0;
+    /**
+     * Boolean locked
+     *
+     * @var int
+     */
+    public $locked = 0;
 
-  /**
-   * Original type
-   *
-   * @var string
-   */
-  public $orig_type = '';
+    /**
+     * Original type
+     *
+     * @var string
+     */
+    public $orig_type = '';
 
-  /**
-   * Constructor. Check base class for use of attributes.
-   * @see JorumDbModel
-   *
-   * @param array $attributes
-   */
+    /**
+     * Constructor. Check base class for use of attributes.
+     * @see JorumDbModel
+     *
+     * @param array $attributes
+     */
 
-  public  function __construct($attributes = array())
-  {
-    parent::__construct($attributes);
-  }
+    public function __construct($attributes = array())
+    {
+        parent::__construct($attributes);
+    }
 
 }

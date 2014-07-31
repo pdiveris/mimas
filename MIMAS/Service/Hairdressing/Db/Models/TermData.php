@@ -23,59 +23,60 @@ namespace MIMAS\Service\Hairdressing\Db\Models;
  * @author Petros Diveris
  *
  */
-class TermData extends \MIMAS\Service\Hairdressing\Db\JorumDbModel {
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-  protected static $table = 'term_data';
+class TermData extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
+{
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected static $table = 'term_data';
 
-  /**
-  * The PK is not id but tid
-  *
-  * @var string $primaryKey
-  */
-  protected static $primaryKey = 'tid';
+    /**
+     * The PK is not id but tid
+     *
+     * @var string $primaryKey
+     */
+    protected static $primaryKey = 'tid';
 
-  /**
-   * Version id
-   *
-   * @var int $vid
-   */
-  public $vid = 0;
+    /**
+     * Version id
+     *
+     * @var int $vid
+     */
+    public $vid = 0;
 
-  /**
-   * Name
-   *
-   * @var string $name
-   */
-  public $name = '';
+    /**
+     * Name
+     *
+     * @var string $name
+     */
+    public $name = '';
 
-  /**
-   * Description
-   *
-   * @var string $description
-   */
-  public $description = '';
+    /**
+     * Description
+     *
+     * @var string $description
+     */
+    public $description = '';
 
-  /**
-   * Weight
-   *
-   * @var int $weight
-   */
-  public $weight = 0;
+    /**
+     * Weight
+     *
+     * @var int $weight
+     */
+    public $weight = 0;
 
-  /**
-   * Constructor. Check base class for use of attributes.
-   * @see JorumDbModel
-   *
-   * @param array $attributes
-   */
+    /**
+     * Constructor. Check base class for use of attributes.
+     * @see JorumDbModel
+     *
+     * @param array $attributes
+     */
 
-  public  function __construct($attributes = array())
-  {
-    parent::__construct($attributes);
-  }
+    public function __construct($attributes = array())
+    {
+        parent::__construct($attributes);
+    }
 
 }

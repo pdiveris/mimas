@@ -12,11 +12,13 @@
  * @author       Petros Diveris <petros.diveris@manchester.ac.uk>
  */
 namespace MIMAS\Service\Jorum;
+
 /**
  * Class Item
  * @package MIMAS\Service\Jorum
  */
-class Item extends JorumApi {
+class Item extends JorumApi
+{
     /**
      * A single Ite, within Jorum
      *
@@ -103,174 +105,195 @@ class Item extends JorumApi {
      */
     protected $bitstreams = array();
 
-  /**
-   * Constructor. See base class for details
-   * @param string $params
-   * @param string $inputFormat
-   * @param array $options
-   */
-    public function __construct($params = '', $inputFormat = 'application/json',$options=array()) {
-      parent::__construct($params,$inputFormat,$options);
+    /**
+     * Constructor. See base class for details
+     * @param string $params
+     * @param string $inputFormat
+     * @param array $options
+     */
+    public function __construct($params = '', $inputFormat = 'application/json', $options = array())
+    {
+        parent::__construct($params, $inputFormat, $options);
     }
 
     /**
      * Get id
      * @return string
      */
-    public function getId() {
-      return $this->id;
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**
      * Set id
      * @param string $id
      */
-    public function setId($id = '') {
-      $this->id = $id;
+    public function setId($id = '')
+    {
+        $this->id = $id;
     }
 
     /**
      * Get handle
      * @return string
      */
-    public function getHandle() {
-      return $this->handle;
+    public function getHandle()
+    {
+        return $this->handle;
     }
 
     /**
      * Set handle
      * @param string $handle
      */
-    public function setHandle($handle = '') {
-      $this->handle = $handle;
+    public function setHandle($handle = '')
+    {
+        $this->handle = $handle;
     }
 
     /**
      * Get name
      * @return string
      */
-    public function getName() {
-      return $this->name;
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**
      * Set name
      * @param string $name
      */
-    public function setName($name='') {
-      $this->name = $name;
+    public function setName($name = '')
+    {
+        $this->name = $name;
     }
 
     /**
      * Get link
      * @return string
      */
-    public function getLink() {
-      return $this->link;
+    public function getLink()
+    {
+        return $this->link;
     }
 
     /**
      * Set link
      * @param string $link
      */
-    public function setLink($link='') {
-      $this->link = $link;
+    public function setLink($link = '')
+    {
+        $this->link = $link;
     }
 
     /**
      * Get type
      * @return string
      */
-    public function getType() {
-      return $this->type;
+    public function getType()
+    {
+        return $this->type;
     }
 
     /**
      * Set type
      * @param string $type
      */
-    public function setType($type='') {
-      $this->type = $type;
+    public function setType($type = '')
+    {
+        $this->type = $type;
     }
 
     /**
      * Get archived
      * @return string
      */
-    public function getArchived() {
-      return $this->archived;
+    public function getArchived()
+    {
+        return $this->archived;
     }
 
     /**
      * Set archived
      * @param bool $archived
      */
-    public function setArchived($archived=false) {
-      $this->archived = $archived;
+    public function setArchived($archived = false)
+    {
+        $this->archived = $archived;
     }
 
     /**
      * Get lastModified
      * @return string
      */
-    public function getLastModified() {
-      return $this->lastModified;
+    public function getLastModified()
+    {
+        return $this->lastModified;
     }
 
     /**
      * Set lastModified
      * @param string $lastModified
      */
-    public function setLastModified($lastModified='') {
-      $this->lastModified = $lastModified;
+    public function setLastModified($lastModified = '')
+    {
+        $this->lastModified = $lastModified;
     }
 
     /**
      * Get withdrawn
      * @return string
      */
-    public function getWithdrawn() {
-      return $this->withdrawn;
+    public function getWithdrawn()
+    {
+        return $this->withdrawn;
     }
 
     /**
      * Set withdrawn
      * @param bool $withdrawn
      */
-    public function setWithdrawn($withdrawn=false) {
-      $this->withdrawn = $withdrawn;
+    public function setWithdrawn($withdrawn = false)
+    {
+        $this->withdrawn = $withdrawn;
     }
 
     /**
      * Get expand
      * @return array
      */
-    public function getExpand() {
-      return $this->expand;
+    public function getExpand()
+    {
+        return $this->expand;
     }
 
     /**
      * Set expand
      * @param array $expand
      */
-    public function setExpand($expand = array()) {
-      $this->expand = $expand;
+    public function setExpand($expand = array())
+    {
+        $this->expand = $expand;
     }
 
     /**
      * Get metadata
      * @return \MIMAS\Service\Jorum\Metadata metadata
      */
-    public function getMetadata() {
-      return $this->metadata;
+    public function getMetadata()
+    {
+        return $this->metadata;
     }
 
     /**
      * Set metadata
      * @param $metadata
      */
-    public function setMetadata($metadata) {
-      $this->metadata = $metadata;
+    public function setMetadata($metadata)
+    {
+        $this->metadata = $metadata;
     }
 
     /**
@@ -282,26 +305,29 @@ class Item extends JorumApi {
      * @param string $inputFormat
      * @return \MIMAS\Service\Jorum\Item $item
      */
-    public static function find($id = '', $options = array(), $outputFormat = '', $inputFormat) {
-      $item = new Item($outputFormat, $inputFormat);
-      return $item->findByIdOrHandle($id, $options);
+    public static function find($id = '', $options = array(), $outputFormat = '', $inputFormat)
+    {
+        $item = new Item($outputFormat, $inputFormat);
+        return $item->findByIdOrHandle($id, $options);
     }
 
     /**
      * Set bitstreams
      * @param array $bitStreams
      */
-    public function setBitstreams($bitStreams = array()) {
-      $this->bitstreams = $bitStreams;
+    public function setBitstreams($bitStreams = array())
+    {
+        $this->bitstreams = $bitStreams;
     }
 
     /**
      * Get bitstreams
      * @return array
      */
-    public function getBitstreams() {
-      return $this->bitstreams;
+    public function getBitstreams()
+    {
+        return $this->bitstreams;
     }
 
 
-  }
+}

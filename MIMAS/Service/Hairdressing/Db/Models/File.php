@@ -14,6 +14,7 @@
  *
  */
 namespace MIMAS\Service\Hairdressing\Db\Models;
+
 /**
  * Class File
  * This models the files table as defined in Drupal 6.x
@@ -21,73 +22,74 @@ namespace MIMAS\Service\Hairdressing\Db\Models;
  * @author Petros Diveris
  *
  */
-class File extends \MIMAS\Service\Hairdressing\Db\JorumDbModel {
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-  protected static $table = 'files';
+class File extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
+{
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected static $table = 'files';
 
-  /**
-  * The PK is not id but fid
-  *
-  * @var string $primaryKey
-  */
-  protected static $primaryKey = 'fid';
+    /**
+     * The PK is not id but fid
+     *
+     * @var string $primaryKey
+     */
+    protected static $primaryKey = 'fid';
 
-  /**
-   * The id
-  * @public int $fid;
-  */
-  public $fid = 0;
+    /**
+     * The id
+     * @public int $fid;
+     */
+    public $fid = 0;
 
-  /**
-   * ui
-   * @var int $uid
-   */
-  public $uid = 0;
+    /**
+     * ui
+     * @var int $uid
+     */
+    public $uid = 0;
 
-  /**
-   * filename
-   * @var string $filename
-   */
-  public $filename = '';
+    /**
+     * filename
+     * @var string $filename
+     */
+    public $filename = '';
 
-  /**
-   * mime type
-   * @var string $filemime
-   */
-  public $filemime = '';
+    /**
+     * mime type
+     * @var string $filemime
+     */
+    public $filemime = '';
 
-  /**
-   * size
-   * @var int $filesize
-   */
-  public $filesize  = 0;
+    /**
+     * size
+     * @var int $filesize
+     */
+    public $filesize = 0;
 
-  /**
-   * status (enabled/disabled)
-   * @var int $status
-   */
-  public $status = 0;
+    /**
+     * status (enabled/disabled)
+     * @var int $status
+     */
+    public $status = 0;
 
-  /**
-   * timestamp
-   * @var int $timestamp
-   */
-  public $timestamp = 0;
+    /**
+     * timestamp
+     * @var int $timestamp
+     */
+    public $timestamp = 0;
 
-  /**
-   * Constructor. Check base class for use of attributes.
-   * @see JorumDbModel
-   *
-   * @param array $attributes
-   */
+    /**
+     * Constructor. Check base class for use of attributes.
+     * @see JorumDbModel
+     *
+     * @param array $attributes
+     */
 
-  public  function __construct($attributes = array())
-  {
-    parent::__construct($attributes);
-  }
+    public function __construct($attributes = array())
+    {
+        parent::__construct($attributes);
+    }
 
 }

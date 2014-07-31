@@ -21,87 +21,88 @@ namespace MIMAS\Service\Hairdressing\Db\Models;
  * @author Petros Diveris
  *
  */
-class NodeRevision extends \MIMAS\Service\Hairdressing\Db\JorumDbModel {
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
-  protected static $table = 'node_revisions';
+class NodeRevision extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
+{
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected static $table = 'node_revisions';
 
-  /**
-  * The PK is not id but vid
-  *
-  * @var string $primaryKey
-  */
-  protected static $primaryKey = 'vid';
+    /**
+     * The PK is not id but vid
+     *
+     * @var string $primaryKey
+     */
+    protected static $primaryKey = 'vid';
 
-  /**
-  * Relation to node.nid
-  *
-  * @public int $nid;
-  */
-  public $nid = 0;
+    /**
+     * Relation to node.nid
+     *
+     * @public int $nid;
+     */
+    public $nid = 0;
 
-  /**
-   * Relaiton to users.uid
-   * @var int $uid
-   */
-  public $uid = 0;
+    /**
+     * Relaiton to users.uid
+     * @var int $uid
+     */
+    public $uid = 0;
 
-  /**
-   * Title
-   *
-   * @var string $title
-   */
-  public $title = '';
+    /**
+     * Title
+     *
+     * @var string $title
+     */
+    public $title = '';
 
-  /**
-   * Body
-   *
-   * @var string $body
-   */
-  public $body = '';
+    /**
+     * Body
+     *
+     * @var string $body
+     */
+    public $body = '';
 
-  /**
-   * Teaser
-   *
-   * @var string $teaser = '';
-   */
-  public $teaser = '';
+    /**
+     * Teaser
+     *
+     * @var string $teaser = '';
+     */
+    public $teaser = '';
 
-  /**
-   * Log entry (e.g. "kenny replaced <em>images/slides</em> with <em>/drupal/images/slides</em> via Scanner Search and Replace module.")
-   *
-   * @var string $log
-   */
-  public $log = '';
+    /**
+     * Log entry (e.g. "kenny replaced <em>images/slides</em> with <em>/drupal/images/slides</em> via Scanner Search and Replace module.")
+     *
+     * @var string $log
+     */
+    public $log = '';
 
-  /**
-   * Datetime timestamp
-   *
-   * @var int $timestamp
-   */
-  public $timestamp = 0;
+    /**
+     * Datetime timestamp
+     *
+     * @var int $timestamp
+     */
+    public $timestamp = 0;
 
-  /**
-   * Int link to filter_formats
-   * 1=>Filtered HTML, 2=>Full HTML, 3=>PHP Code etc/
-   *
-   * @var string $format
-   */
-  public $format = '';
+    /**
+     * Int link to filter_formats
+     * 1=>Filtered HTML, 2=>Full HTML, 3=>PHP Code etc/
+     *
+     * @var string $format
+     */
+    public $format = '';
 
-  /**
-   * Constructor. Check base class for use of attributes.
-   * @see JorumDbModel
-   *
-   * @param array $attributes
-   */
+    /**
+     * Constructor. Check base class for use of attributes.
+     * @see JorumDbModel
+     *
+     * @param array $attributes
+     */
 
-  public  function __construct($attributes = array())
-  {
-    parent::__construct($attributes);
-  }
+    public function __construct($attributes = array())
+    {
+        parent::__construct($attributes);
+    }
 
 }

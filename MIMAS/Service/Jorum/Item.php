@@ -329,5 +329,4 @@ class Item extends JorumApi
         return $this->bitstreams;
     }
 
-
 }

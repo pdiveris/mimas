@@ -52,6 +52,12 @@ class Collection extends JorumApi
     protected $link = '';
 
     /**
+     * Expand array (e.g. metadata, all)
+     * @var array $expand
+     */
+    protected $expand = array();
+
+    /**
      * logo
      * @var string
      */
@@ -183,6 +189,25 @@ class Collection extends JorumApi
     {
         $this->link = $link;
     }
+
+    /**
+     * Get expand array (e.g. (0=>'all',1=>'metadata')
+     * @return array
+     */
+    public function getExpand()
+    {
+        return $this->expand;
+    }
+
+    /**
+     * Set expand array (e.g. (0=>'all',1=>'metadata')
+     * @param string $expand
+     */
+    public function setExpanded($expand = '')
+    {
+        $this->expand = $expand;
+    }
+
 
     /**
      * Get logo

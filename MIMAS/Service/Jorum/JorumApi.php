@@ -13,9 +13,8 @@
  */
 namespace MIMAS\Service\Jorum;
 
-use Illuminate\Support\Facades\Input;
-
 use jyggen\Curl;
+
 
 /**
  * Class JorumApi
@@ -29,6 +28,7 @@ use jyggen\Curl;
  * @package MIMAS\Service\Jorum
  * @version 1.0.1
  * @todo Inject Cache object
+ *
  *
  */
 class JorumApi implements \JsonSerializable, \IteratorAggregate
@@ -53,6 +53,7 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate
      *
      * @var string apiUrl
      * @todo testing todos
+     *
      */
     protected static $apiUrl;
 
@@ -86,6 +87,7 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate
      * Mime type of requested content e.g. application/xml.
      *
      * @var string
+     *
      */
     private static $httpAccept = 'application/json';
 
@@ -114,7 +116,7 @@ class JorumApi implements \JsonSerializable, \IteratorAggregate
      * extra options e.g. limit and offset
      * @var array
      */
-    private $options = array();
+    protected $options = array();
 
     /**
      *

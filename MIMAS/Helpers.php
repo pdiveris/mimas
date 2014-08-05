@@ -128,11 +128,19 @@ class Helpers
      * @param Object|array $data
      * @param $node
      * @param int $depth Used for indentation
+     * @param string $subNode
      * @internal param string $root_node
      * @return string $xml
      */
-    private static function itemEncode($data, $node, $depth) {
+    private static function itemEncode($data, $node, $depth, $subNode) {
         $xml = str_repeat("\t", $depth);
+
+        if (utf8_decode($node) == 'item') {
+            $node = get_class($data);
+            $node = str_replace('\\', '_', $node);
+            $node = str_replace('MIMAS_Service_Jorum_', '', $node);
+            $node = strtolower($node);
+        }
 
         if (strpos(utf8_decode($node), 'expand') ==false && strpos(utf8_decode($node), 'items') ==false) {   // code specific to the API. refactoring is due
             $xml .= "<{$node}>" . PHP_EOL;
@@ -147,7 +155,7 @@ class Helpers
                     if ($key=='0' || intval($key)>0) {
                         $key = 'item';
                     }
-                    $xml .= self::itemEncode($val, $key, ($depth + 1));
+                    $xml .= self::itemEncode($val, $key, ($depth + 1), $subNode);
                 } else {
                     $xml .= str_repeat("\t", ($depth + 1));
                     if ($key=='0' || intval($key)>0) {
@@ -173,11 +181,12 @@ class Helpers
     *
     * @param Object $obj
     * @param string $root_node
+    * @param string $subNode
     * @return string $xml
     */
-    public static function encodeItems($obj, $root_node = 'itemList') {
+    public static function encodeItems($obj, $root_node = 'itemList', $subNode) {
         $xml = '<?xml version="1.0" encoding="utf-8"?>' . PHP_EOL;
-        $xml .= self::itemEncode($obj, $root_node, $depth = 0);
+        $xml .= self::itemEncode($obj, $root_node, $depth = 0, $subNode);
         return $xml;
     }
 

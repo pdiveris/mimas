@@ -139,17 +139,19 @@ class Helpers
             $node = get_class($data);
             $node = str_replace('\\', '_', $node);
             $node = str_replace('MIMAS_Service_Jorum_', '', $node);
+            $node = str_replace('MIMAS_Service_Hairdressing_', '', $node);
+
             $node = strtolower($node);
         }
 
-        if (strpos(utf8_decode($node), 'expand') ==false && strpos(utf8_decode($node), 'items') ==false) {   // code specific to the API. refactoring is due
+        if (strpos(utf8_decode($node), 'expand')==false && strpos(utf8_decode($node), 'items')==false) {   // code specific to the API. refactoring is due
             $xml .= "<{$node}>" . PHP_EOL;
         }
 
         foreach($data as $key => $val) {
             $key = str_replace('*', '', $key);
 
-            if (strpos(utf8_decode($key), 'options') ==false ) {   // code specific to the API. refactoring is due
+            if (strpos(utf8_decode($key), 'options') ==false && strpos(utf8_decode($key), 'MIMAS\Service') ==false ) {   // code specific to the API. refactoring is due
 
                 if(is_array($val) || is_object($val)) {
                     if ($key=='0' || intval($key)>0) {
@@ -158,16 +160,22 @@ class Helpers
                     $xml .= self::itemEncode($val, $key, ($depth + 1), $subNode);
                 } else {
                     $xml .= str_repeat("\t", ($depth + 1));
+                    /*
+                     * This code is specific to the way dcAttrs are exposed as arrays by the PHP API
+                     * @todo: Refactor so that either we get a comma separated list or we get a series of the same attribute (repeated)
+                     *
+                     */
                     if ($key=='0' || intval($key)>0) {
-                        $key = 'expand';
+                        $comma = intval($key)>0 ? ', ' : '';
+                        $xml .= "$comma" . htmlspecialchars($val) . "" . PHP_EOL;
+                    } else {
+                        $xml .= "<{$key}>" . htmlspecialchars($val) . "</{$key}>" . PHP_EOL;
                     }
-
-                    $xml .= "<{$key}>" . htmlspecialchars($val) . "</{$key}>" . PHP_EOL;
                 }
             }
         }
-        $xml .= str_repeat("\t", $depth);
 
+        $xml .= str_repeat("\t", $depth);
         if (strpos(utf8_decode($node), 'expand') ==false  && strpos(utf8_decode($node), 'items') ==false) {   // code specific to the API. refactoring is due
             $xml .= "</{$node}>" . PHP_EOL;
         }

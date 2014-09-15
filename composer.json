@@ -4,9 +4,9 @@
     "keywords": ["MIMAS", "JISC", "Jorum", "Hairdressers Training", "phpstorm", "netbeans", "sublime", "codeintel", "phpdoc"],
     "license": "MIT",
     "authors": [
-        {
-            "name": "Petros Diveris",
-            "email": "pdiveris@gmail.com"
+       {
+           "name": "Petros Diveris",
+           "email": "pdiveris@gmail.com"
         }
     ],
     "require": {
@@ -20,7 +20,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.9.0"
+            "dev-master": "1.0.0"
         }
     }
 }

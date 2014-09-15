@@ -7,10 +7,9 @@
 			"author": "Petros Diveris",
 			"homepage": "https://github.com/pdiveris/MIMAS",
 			"details": "https://github.com/pdiveris/MIMAS",
-			"labels": ["php", "laravel", "API", "MIMAS", "JISC"],
-	    		"repositories": {
-				"url": "https://github.com/pdiveris/MIMAS/",
-				"type": "vcs"
+			"dist": {
+				"url": "https://github.com/pdiveris/MIMAS/archive/master.zip",
+				"type": "zip"
 			}
 		}
 	]

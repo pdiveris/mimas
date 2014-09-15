@@ -1,16 +1,26 @@
 {
-	"schema_version": "2.0",
-	"packages": [
-		{
-			"name": "MIMAS API",
-			"description": "PHP APIs for Hairdressers Training and Jorum. More to follow (eBooks, Mediahub)",
-			"author": "Petros Diveris",
-			"homepage": "https://github.com/pdiveris/MIMAS",
-			"details": "https://github.com/pdiveris/MIMAS",
-			"dist": {
-				"url": "https://github.com/pdiveris/MIMAS/archive/master.zip",
-				"type": "zip"
-			}
-		}
-	]
+    "name": "pdiveris/MIMAS",
+    "description": "MIMAS APIs for PHP.",
+    "keywords": ["MIMAS", "JISC", "Jorum", "Hairdressers Training", "phpstorm", "netbeans", "sublime", "codeintel", "phpdoc"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petros Diveris",
+            "email": "pdiveris@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Pdiveris\\MIMAS\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.9-dev"
+        }
+    }
 }

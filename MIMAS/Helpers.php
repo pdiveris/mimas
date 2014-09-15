@@ -144,7 +144,7 @@ class Helpers
             $node = strtolower($node);
         }
 
-        if (strpos(utf8_decode($node), 'expand')==false && strpos(utf8_decode($node), 'items')==false) {   // code specific to the API. refactoring is due
+        if ( strpos(utf8_decode($node), 'items')==false) {   // code specific to the API. refactoring is due
             $xml .= "<{$node}>" . PHP_EOL;
         }
 
@@ -176,7 +176,7 @@ class Helpers
         }
 
         $xml .= str_repeat("\t", $depth);
-        if (strpos(utf8_decode($node), 'expand') ==false  && strpos(utf8_decode($node), 'items') ==false) {   // code specific to the API. refactoring is due
+        if ( strpos(utf8_decode($node), 'items') ==false) {   // code specific to the API. refactoring is due
             $xml .= "</{$node}>" . PHP_EOL;
         }
 

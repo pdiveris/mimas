@@ -23,7 +23,7 @@ use MIMAS\Service\Hairdressing\DrupalApi;
  *
  * @author Petros Diveris
  */
-class Node extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
+class SuperNode extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
 {
   /**
    * The database table used by the model.

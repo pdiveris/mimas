@@ -23,50 +23,50 @@ namespace MIMAS\Service\Jorum;
 
 class ItemList
 {
-    /**
-     * items
-     * @var array
-     */
-    private $items = array();
+  /**
+   * items
+   * @var array
+   */
+  private $items = array();
 
-    /**
-     * Constructor
-     * @param array $data
-     */
-    public function __construct($data = array())
-    {
+  /**
+   * Constructor
+   * @param array $data
+   */
+  public function __construct($data = array())
+  {
 
+  }
+
+  /**
+   * Return all items
+   * @return mixed
+   */
+  public function all()
+  {
+    return $this->all();
+  }
+
+  /**
+   * Return first item
+   * @return mixed
+   */
+  public function first()
+  {
+    if (count($this->items) > 0) {
+      return $this->items[0];
     }
+    return false;
+  }
 
-    /**
-     * Return all items
-     * @return mixed
-     */
-    public function all()
-    {
-        return $this->all();
+  /**
+   * Return last item
+   * @return mixed
+   */
+  public function last()
+  {
+    if (count($this->items) > 0) {
+      return $this->items[count($this->items) - 1];
     }
-
-    /**
-     * Return first item
-     * @return mixed
-     */
-    public function first()
-    {
-        if (count($this->items) > 0) {
-            return $this->items[0];
-        }
-        return false;
-    }
-
-    /**
-     * Return last item
-     * @return mixed
-     */
-    public function last()
-    {
-        if (count($this->items) > 0) {
-            return $this->items[count($this->items) - 1];
-        }
-    }
+  }
 }

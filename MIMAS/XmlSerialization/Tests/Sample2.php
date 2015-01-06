@@ -11,17 +11,17 @@ namespace MIMAS\XmlSerialization\Tests;
 class Sample2
 {
 
-    /**
-     * @XmlElement(string, e1)
-     * @XmlElement(int, e2)
-     * @XmlAttribute(float, a1)
-     * @XmlAttribute(bool, a2)
-     */
+  /**
+   * @XmlElement(string, e1)
+   * @XmlElement(int, e2)
+   * @XmlAttribute(float, a1)
+   * @XmlAttribute(bool, a2)
+   */
 
-    /**
-     * prop
-     * @var $prop
-     */
-    private $prop;
+  /**
+   * prop
+   * @var $prop
+   */
+  private $prop;
 
 }

@@ -8,11 +8,11 @@ namespace MIMAS\XmlSerialization\Tests;
 class Sample5
 {
 
-    /**
-     * Private a
-     * @XmlElement(int, test)
-     * @XmlAttribute(int, test)
-     */
-    private $a;
+  /**
+   * Private a
+   * @XmlElement(int, test)
+   * @XmlAttribute(int, test)
+   */
+  private $a;
 
 }

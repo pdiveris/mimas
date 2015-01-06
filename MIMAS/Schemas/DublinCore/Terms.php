@@ -27,334 +27,334 @@ namespace MIMAS\Schemas\DublinCore;
  */
 class Terms
 {
-    /**
-     * @var $title
-     * substitutionGroup="dc:title"
-     */
-    public $title;
+  /**
+   * @var $title
+   * substitutionGroup="dc:title"
+   */
+  public $title;
 
-    /**
-     * @var $creator
-     * substitutionGroup="dc:creator"
-     */
-    public $creator;
+  /**
+   * @var $creator
+   * substitutionGroup="dc:creator"
+   */
+  public $creator;
 
-    /**
-     * @var $subject
-     * substitutionGroup="dc:subject"
-     */
-    public $subject;
+  /**
+   * @var $subject
+   * substitutionGroup="dc:subject"
+   */
+  public $subject;
 
-    /**
-     * @var $description
-     * substitutionGroup="dc:description"
-     */
-    public $description;
+  /**
+   * @var $description
+   * substitutionGroup="dc:description"
+   */
+  public $description;
 
-    /**
-     * @var $publisher
-     * substitutionGroup="dc:publisher"
-     */
-    public $publisher;
+  /**
+   * @var $publisher
+   * substitutionGroup="dc:publisher"
+   */
+  public $publisher;
 
-    /**
-     * @var $contributor
-     * substitutionGroup="dc:contributor"
-     */
-    public $contributor;
+  /**
+   * @var $contributor
+   * substitutionGroup="dc:contributor"
+   */
+  public $contributor;
 
-    /**
-     * @var $date
-     * substitutionGroup="dc:date"
-     */
-    public $date;
-    /**
-     * @var $type
-     * substitutionGroup="dc:type"
-     */
-    public $type;
+  /**
+   * @var $date
+   * substitutionGroup="dc:date"
+   */
+  public $date;
+  /**
+   * @var $type
+   * substitutionGroup="dc:type"
+   */
+  public $type;
 
-    /**
-     * @var $format
-     * substitutionGroup="dc:format"
-     */
-    public $format;
+  /**
+   * @var $format
+   * substitutionGroup="dc:format"
+   */
+  public $format;
 
-    /**
-     * @var $identifier
-     *  substitutionGroup="dc:identifier"
-     */
-    public $identifier;
+  /**
+   * @var $identifier
+   *  substitutionGroup="dc:identifier"
+   */
+  public $identifier;
 
-    /**
-     * @var $source
-     * substitutionGroup="dc:source"
-     */
-    public $source;
+  /**
+   * @var $source
+   * substitutionGroup="dc:source"
+   */
+  public $source;
 
-    /**
-     * @var $language
-     *  substitutionGroup="dc:language"
-     */
-    public $language;
+  /**
+   * @var $language
+   *  substitutionGroup="dc:language"
+   */
+  public $language;
 
-    /**
-     * @var $relation
-     * substitutionGroup="dc:relation"
-     */
-    public $relation;
+  /**
+   * @var $relation
+   * substitutionGroup="dc:relation"
+   */
+  public $relation;
 
-    /**
-     * @var $coverage
-     * substitutionGroup="dc:coverage"
-     */
-    public $coverage;
+  /**
+   * @var $coverage
+   * substitutionGroup="dc:coverage"
+   */
+  public $coverage;
 
-    /**
-     * @var $rights
-     * substitutionGroup="dc:rights"
-     */
-    public $rights;
+  /**
+   * @var $rights
+   * substitutionGroup="dc:rights"
+   */
+  public $rights;
 
-    /**
-     * @var $alternative
-     * substitutionGroup="title"
-     */
-    public $alternative;
+  /**
+   * @var $alternative
+   * substitutionGroup="title"
+   */
+  public $alternative;
 
-    /**
-     * @var $tableOfContents
-     * substitutionGroup="description"
-     */
-    public $tableOfContents;
+  /**
+   * @var $tableOfContents
+   * substitutionGroup="description"
+   */
+  public $tableOfContents;
 
-    /**
-     * @var $abstract
-     * substitutionGroup="description"
-     */
-    public $abstract;
+  /**
+   * @var $abstract
+   * substitutionGroup="description"
+   */
+  public $abstract;
 
-    /**
-     * @var $created
-     * substitutionGroup="date"
-     */
-    public $created;
+  /**
+   * @var $created
+   * substitutionGroup="date"
+   */
+  public $created;
 
-    /**
-     * @var $valid
-     * substitutionGroup="date"
-     */
-    public $valid;
+  /**
+   * @var $valid
+   * substitutionGroup="date"
+   */
+  public $valid;
 
-    /**
-     * @var $available
-     * substitutionGroup="date"
-     */
-    public $available;
+  /**
+   * @var $available
+   * substitutionGroup="date"
+   */
+  public $available;
 
-    /**
-     * @var $issued
-     * substitutionGroup="date"
-     */
-    public $issued;
+  /**
+   * @var $issued
+   * substitutionGroup="date"
+   */
+  public $issued;
 
-    /**
-     * @var $modified
-     *  substitutionGroup="date"
-     */
-    public $modified;
+  /**
+   * @var $modified
+   *  substitutionGroup="date"
+   */
+  public $modified;
 
-    /**
-     * @var $dateAccepted
-     * substitutionGroup="date"
-     */
-    public $dateAccepted;
+  /**
+   * @var $dateAccepted
+   * substitutionGroup="date"
+   */
+  public $dateAccepted;
 
-    /**
-     * @var $dateCopyrighted
-     * substitutionGroup="date"
-     */
-    public $dateCopyrighted;
+  /**
+   * @var $dateCopyrighted
+   * substitutionGroup="date"
+   */
+  public $dateCopyrighted;
 
-    /**
-     * @var $dateSubmitted
-     * substitutionGroup="date"
-     */
-    public $dateSubmitted;
+  /**
+   * @var $dateSubmitted
+   * substitutionGroup="date"
+   */
+  public $dateSubmitted;
 
-    /**
-     * @var $extent
-     * substitutionGroup="format"
-     */
-    public $extent;
+  /**
+   * @var $extent
+   * substitutionGroup="format"
+   */
+  public $extent;
 
-    /**
-     * @var $medium
-     *  substitutionGroup="format"
-     */
-    public $medium;
+  /**
+   * @var $medium
+   *  substitutionGroup="format"
+   */
+  public $medium;
 
-    /**
-     * @var $isVersionOf
-     * substitutionGroup="relation"
-     */
-    public $isVersionOf;
+  /**
+   * @var $isVersionOf
+   * substitutionGroup="relation"
+   */
+  public $isVersionOf;
 
-    /**
-     * @var $hasVersion
-     * substitutionGroup="relation"
-     */
-    public $hasVersion;
+  /**
+   * @var $hasVersion
+   * substitutionGroup="relation"
+   */
+  public $hasVersion;
 
-    /**
-     * @var $isreplacedBy
-     * substitutionGroup="relation"
-     */
-    public $isReplacedBy;
+  /**
+   * @var $isreplacedBy
+   * substitutionGroup="relation"
+   */
+  public $isReplacedBy;
 
-    /**
-     * @var $replaces
-     * substitutionGroup="relation"
-     */
-    public $replaces;
+  /**
+   * @var $replaces
+   * substitutionGroup="relation"
+   */
+  public $replaces;
 
-    /**
-     * @var $isRequiredBy
-     * substitutionGroup="relation"
-     */
-    public $isRequiredBy;
+  /**
+   * @var $isRequiredBy
+   * substitutionGroup="relation"
+   */
+  public $isRequiredBy;
 
-    /**
-     * @var $requires
-     * substitutionGroup="relation"
-     */
-    public $requires;
+  /**
+   * @var $requires
+   * substitutionGroup="relation"
+   */
+  public $requires;
 
-    /**
-     * @var $isPartOf
-     * substitutionGroup="relation"
-     */
-    public $isPartOf;
+  /**
+   * @var $isPartOf
+   * substitutionGroup="relation"
+   */
+  public $isPartOf;
 
-    /**
-     * @var $hasPart
-     * substitutionGroup="relation"
-     */
-    public $hasPart;
+  /**
+   * @var $hasPart
+   * substitutionGroup="relation"
+   */
+  public $hasPart;
 
-    /**
-     * @var $isReferencedBy
-     * substitutionGroup="relation"
-     */
-    public $isReferencedBy;
+  /**
+   * @var $isReferencedBy
+   * substitutionGroup="relation"
+   */
+  public $isReferencedBy;
 
-    /**
-     * @var $references
-     * substitutionGroup="relation"
-     */
-    public $references;
+  /**
+   * @var $references
+   * substitutionGroup="relation"
+   */
+  public $references;
 
-    /**
-     * @var $isFormatOf
-     * substitutionGroup="relation"
-     */
-    public $isFormatOf;
+  /**
+   * @var $isFormatOf
+   * substitutionGroup="relation"
+   */
+  public $isFormatOf;
 
-    /**
-     * @var $hasFormat
-     * substitutionGroup="relation"
-     */
-    public $hasFormat;
+  /**
+   * @var $hasFormat
+   * substitutionGroup="relation"
+   */
+  public $hasFormat;
 
-    /**
-     * @var $conformsTo
-     * substitutionGroup="relation"
-     */
-    public $conformsTo;
+  /**
+   * @var $conformsTo
+   * substitutionGroup="relation"
+   */
+  public $conformsTo;
 
-    /**
-     * @var $spatial
-     * substitutionGroup="coverage"
-     */
-    public $spatial;
+  /**
+   * @var $spatial
+   * substitutionGroup="coverage"
+   */
+  public $spatial;
 
-    /**
-     * @var $temporal
-     * substitutionGroup="coverage"
-     */
-    public $temporal;
+  /**
+   * @var $temporal
+   * substitutionGroup="coverage"
+   */
+  public $temporal;
 
-    /**
-     * @var $audience
-     * substitutionGroup="dc:any"
-     */
-    public $audience;
+  /**
+   * @var $audience
+   * substitutionGroup="dc:any"
+   */
+  public $audience;
 
-    /**
-     * @var $accrualMethod
-     * substitutionGroup="dc:any"
-     */
-    public $accrualMethod;
+  /**
+   * @var $accrualMethod
+   * substitutionGroup="dc:any"
+   */
+  public $accrualMethod;
 
-    /**
-     * @var $accrualPeriodicity
-     * substitutionGroup="dc:any"
-     */
-    public $accrualPeriodicity;
+  /**
+   * @var $accrualPeriodicity
+   * substitutionGroup="dc:any"
+   */
+  public $accrualPeriodicity;
 
-    /**
-     * @var $accrualPolicy
-     * substitutionGroup="dc:any"
-     */
-    public $accrualPolicy;
+  /**
+   * @var $accrualPolicy
+   * substitutionGroup="dc:any"
+   */
+  public $accrualPolicy;
 
-    /**
-     * @var $instructionalMethod
-     * substitutionGroup="dc:any"
-     */
-    public $instructionalMethod;
+  /**
+   * @var $instructionalMethod
+   * substitutionGroup="dc:any"
+   */
+  public $instructionalMethod;
 
-    /**
-     * @var $provenance
-     * substitutionGroup="dc:any"
-     */
-    public $provenance;
+  /**
+   * @var $provenance
+   * substitutionGroup="dc:any"
+   */
+  public $provenance;
 
-    /**
-     * @var $rightsHolder
-     * substitutionGroup="dc:any"
-     */
-    public $rightsHolder;
+  /**
+   * @var $rightsHolder
+   * substitutionGroup="dc:any"
+   */
+  public $rightsHolder;
 
-    /**
-     * @var $mediator
-     * substitutionGroup="audience"
-     */
-    public $mediator;
+  /**
+   * @var $mediator
+   * substitutionGroup="audience"
+   */
+  public $mediator;
 
-    /**
-     * @var $educationLevel
-     * substitutionGroup="audience"
-     */
-    public $educationLevel;
+  /**
+   * @var $educationLevel
+   * substitutionGroup="audience"
+   */
+  public $educationLevel;
 
-    /**
-     * @var $accessRights
-     * substitutionGroup="rights"
-     */
-    public $accessRights;
+  /**
+   * @var $accessRights
+   * substitutionGroup="rights"
+   */
+  public $accessRights;
 
-    /**
-     * @var $license
-     * substitutionGroup="rights"
-     */
-    public $license;
+  /**
+   * @var $license
+   * substitutionGroup="rights"
+   */
+  public $license;
 
-    /**
-     * @var $bibliographicCitation
-     * substitutionGroup="identifier"
-     */
-    public $bibliographicCitation;
+  /**
+   * @var $bibliographicCitation
+   * substitutionGroup="identifier"
+   */
+  public $bibliographicCitation;
 
 
 }

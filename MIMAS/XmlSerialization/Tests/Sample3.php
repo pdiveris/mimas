@@ -8,16 +8,16 @@ namespace MIMAS\XmlSerialization\Tests;
 class Sample3
 {
 
-    /**
-     * a
-     * @XmlAttribute(float, test)
-     */
-    private $a;
+  /**
+   * a
+   * @XmlAttribute(float, test)
+   */
+  private $a;
 
-    /**
-     * b
-     * @XmlAttribute(T, test)
-     */
-    private $b;
+  /**
+   * b
+   * @XmlAttribute(T, test)
+   */
+  private $b;
 
 }

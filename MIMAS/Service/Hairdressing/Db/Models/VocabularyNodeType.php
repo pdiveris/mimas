@@ -25,43 +25,43 @@ namespace MIMAS\Service\Hairdressing\Db\Models;
  */
 class VocabularyNodeType extends \MIMAS\Service\Hairdressing\Db\JorumDbModel
 {
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected static $table = 'vocabulary_node_types';
+  /**
+   * The database table used by the model.
+   *
+   * @var string
+   */
+  protected static $table = 'vocabulary_node_types';
 
-    /**
-     * The PK is not id but tid
-     *
-     * @var string $primaryKey
-     */
-    protected static $primaryKey = 'vid';
+  /**
+   * The PK is not id but tid
+   *
+   * @var string $primaryKey
+   */
+  protected static $primaryKey = 'vid';
 
-    /**
-     * Version id
-     *
-     * @var int $vid
-     */
-    public $vid = 0;
+  /**
+   * Version id
+   *
+   * @var int $vid
+   */
+  public $vid = 0;
 
-    /**
-     * Type (e.g. step)
-     *
-     * @var string $type
-     */
-    public $type = '';
+  /**
+   * Type (e.g. step)
+   *
+   * @var string $type
+   */
+  public $type = '';
 
-    /**
-     * Constructor. Check base class for use of attributes.
-     * @see JorumDbModel
-     *
-     * @param array $attributes
-     */
-    public function __construct($attributes = array())
-    {
-        parent::__construct($attributes);
-    }
+  /**
+   * Constructor. Check base class for use of attributes.
+   * @see JorumDbModel
+   *
+   * @param array $attributes
+   */
+  public function __construct($attributes = array())
+  {
+    parent::__construct($attributes);
+  }
 
 }

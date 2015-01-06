@@ -11,16 +11,16 @@ namespace MIMAS\XmlSerialization\Tests;
 class Sample9
 {
 
-    /**
-     * child
-     * @XmlElement(Sample9)
-     */
-    public $child;
+  /**
+   * child
+   * @XmlElement(Sample9)
+   */
+  public $child;
 
-    /**
-     * str
-     * @XmlElement
-     */
-    public $str;
+  /**
+   * str
+   * @XmlElement
+   */
+  public $str;
 
 }

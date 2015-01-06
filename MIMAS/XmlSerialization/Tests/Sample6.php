@@ -8,10 +8,10 @@ namespace MIMAS\XmlSerialization\Tests;
 class Sample6
 {
 
-    /**
-     * var a
-     * @XmlElement
-     */
-    private static $a;
+  /**
+   * var a
+   * @XmlElement
+   */
+  private static $a;
 
 }

@@ -12,17 +12,17 @@ namespace MIMAS\XmlSerialization\Tests;
 class Sample8
 {
 
-    /**
-     * element
-     * @XmlElement
-     * @XmlElement(bool, element-bool)
-     */
-    public $element = "xyz";
+  /**
+   * element
+   * @XmlElement
+   * @XmlElement(bool, element-bool)
+   */
+  public $element = "xyz";
 
-    /**
-     * attr
-     * @XmlAttribute(int)
-     */
-    public $attr = 5;
+  /**
+   * attr
+   * @XmlAttribute(int)
+   */
+  public $attr = 5;
 
 }

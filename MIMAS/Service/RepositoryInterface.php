@@ -22,24 +22,24 @@ namespace MIMAS\Service;
 interface RepositoryInterface
 {
 
-    /**
-     * Find by id or handle
-     * @param string $id
-     * @param array $options
-     * @return mixed
-     */
-    public function findByIdOrHandle($id = '', $options = array());
+  /**
+   * Find by id or handle
+   * @param string $id
+   * @param array $options
+   * @return mixed
+   */
+  public function findByIdOrHandle($id = '', $options = array());
 
-    /**
-     * Return all rows
-     * @return mixed
-     */
-    public function all();
+  /**
+   * Return all rows
+   * @return mixed
+   */
+  public function all();
 
-    /**
-     * Return as pretty HTML
-     * @return mixed
-     */
-    public function toHtml();
+  /**
+   * Return as pretty HTML
+   * @return mixed
+   */
+  public function toHtml();
 
 } 

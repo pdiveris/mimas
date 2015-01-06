@@ -11,50 +11,50 @@ namespace MIMAS\XmlSerialization\Tests;
 class Sample10_Granny
 {
 
-    /**
-     * private
-     * @XmlElement
-     */
-    private $private;
+  /**
+   * private
+   * @XmlElement
+   */
+  private $private;
 
-    /**
-     * protected
-     * @XmlElement
-     */
-    protected $protected;
+  /**
+   * protected
+   * @XmlElement
+   */
+  protected $protected;
 
-    /**
-     * public
-     * @XmlElement
-     */
-    public $public;
+  /**
+   * public
+   * @XmlElement
+   */
+  public $public;
 
-    /**
-     * setPrivate
-     * @param $private
-     */
-    public function setPrivate($private)
-    {
-        $this->private = $private;
-    }
+  /**
+   * setPrivate
+   * @param $private
+   */
+  public function setPrivate($private)
+  {
+    $this->private = $private;
+  }
 
-    /**
-     * setProtected
-     * @param $protected
-     */
-    public function setProtected($protected)
-    {
-        $this->protected = $protected;
-    }
+  /**
+   * setProtected
+   * @param $protected
+   */
+  public function setProtected($protected)
+  {
+    $this->protected = $protected;
+  }
 
-    /**
-     * setPublic
-     * @param $public
-     */
-    public function setPublic($public)
-    {
-        $this->public = $public;
-    }
+  /**
+   * setPublic
+   * @param $public
+   */
+  public function setPublic($public)
+  {
+    $this->public = $public;
+  }
 
 
 }

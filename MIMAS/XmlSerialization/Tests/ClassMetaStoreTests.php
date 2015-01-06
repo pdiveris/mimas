@@ -13,15 +13,15 @@ use MIMAS\XmlSerialization\ClassMetaStore;
  */
 class ClassMetaStoreTests
 {
-    /**
-     * Stop hassling me for documentation
-     */
-    function test_1()
-    {
-        $class = __NAMESPACE__ . "\\Sample1";
-        $meta = ClassMetaStore::getMeta($class);
-        assert($meta->getClassName() == $class);
-    }
+  /**
+   * Stop hassling me for documentation
+   */
+  function test_1()
+  {
+    $class = __NAMESPACE__ . "\\Sample1";
+    $meta = ClassMetaStore::getMeta($class);
+    assert($meta->getClassName() == $class);
+  }
 
 
 }

@@ -116,6 +116,37 @@ class Metadata extends JorumModel
   protected $dcSubjectLdcode = array();
 
   /**
+   * lomEducationalTypicallearningtime
+   * @var array $lomEducationalTypicallearningtime
+   */
+  protected $lomEducationalTypicallearningtime = array();
+
+  /**
+   * lomEducationalContext
+   * @var array $lomEducationalContext
+   */
+  protected $lomEducationalContext  = array();
+
+  /**
+   * lomEducationalDescription
+   * @var array $lomEducationalDescription
+   */
+  protected $lomEducationalDescription  = array();
+
+  /**
+   * $lomEducationalIntendedenduserrole
+   * @var array $lomEducationalIntendedenduserrole
+   */
+  protected $lomEducationalIntendedenduserrole  = array();
+
+
+  /**
+   * lomEducationalLearningresourcetype
+   * @var array $lomEducationalLearningresourcetype
+   */
+  protected $lomEducationalLearningresourcetype  = array();
+
+  /**
    * jmdOer
    * @var array $jmdOer
    */
@@ -126,11 +157,6 @@ class Metadata extends JorumModel
    * @var array $jmdResourceClass
    */
   protected $jmdResourceClass = array();
-  /**
-   * jmdResourceclass
-   * @var array $jmdResourceclass
-   */
-  protected $jmdResourceclass = array();
 
   /**
    * jmdCommunity
@@ -409,6 +435,86 @@ class Metadata extends JorumModel
   }
 
   /**
+   * @param array $lomEducationalContext
+   */
+  public function setLomEducationalContext($lomEducationalContext)
+  {
+    $this->lomEducationalContext = $lomEducationalContext;
+  }
+
+  /**
+   * @return array
+   */
+  public function getLomEducationalContext()
+  {
+    return $this->lomEducationalContext;
+  }
+
+  /**
+   * @param array $lomEducationalDescription
+   */
+  public function setLomEducationalDescription($lomEducationalDescription)
+  {
+    $this->lomEducationalDescription = $lomEducationalDescription;
+  }
+
+  /**
+   * @return array
+   */
+  public function getLomEducationalDescription()
+  {
+    return $this->lomEducationalDescription;
+  }
+
+  /**
+   * @param array $lomEducationalIntendedenduserrole
+   */
+  public function setLomEducationalIntendedenduserrole($lomEducationalIntendedenduserrole)
+  {
+    $this->lomEducationalIntendedenduserrole = $lomEducationalIntendedenduserrole;
+  }
+
+  /**
+   * @return array
+   */
+  public function getLomEducationalIntendedenduserrole()
+  {
+    return $this->lomEducationalIntendedenduserrole;
+  }
+
+  /**
+   * @param array $lomEducationalLearningresourcetype
+   */
+  public function setLomEducationalLearningresourcetype($lomEducationalLearningresourcetype)
+  {
+    $this->lomEducationalLearningresourcetype = $lomEducationalLearningresourcetype;
+  }
+
+  /**
+   * @return array
+   */
+  public function getLomEducationalLearningresourcetype()
+  {
+    return $this->lomEducationalLearningresourcetype;
+  }
+
+  /**
+   * @param array $lomEducationalTypicallearningtime
+   */
+  public function setLomEducationalTypicallearningtime($lomEducationalTypicallearningtime)
+  {
+    $this->lomEducationalTypicallearningtime = $lomEducationalTypicallearningtime;
+  }
+
+  /**
+   * @return array
+   */
+  public function getLomEducationalTypicallearningtime()
+  {
+    return $this->lomEducationalTypicallearningtime;
+  }
+
+  /**
    * Set setJmdOer
    * @param array $jmdOer
    */
@@ -430,7 +536,7 @@ class Metadata extends JorumModel
    * Set jmdResourceclass
    * @param array $jmdResourceclass
    */
-  public function setJmdResourceclass($jmdResourceclass = array())
+  public function setJmdResourceClass($jmdResourceclass = array())
   {
     $this->jmdResourceclass = $jmdResourceclass;
   }
@@ -439,7 +545,7 @@ class Metadata extends JorumModel
    * Get jmdResourceclass
    * @return array getJmdResourceclass
    */
-  public function getJmdResourceclass()
+  public function getJmdResourceClass()
   {
     return implode(',', $this->jmdResourceclass);
   }
